@@ -13,14 +13,15 @@ Add one-time password authentication to your SSH server.
 
 
 The following instructions are based on ubuntu, but they can be adapted for other Linux distributions.
+Depending on linux distribution Python 2 or Python 3 may be installed, ssh-otp supports both.
 
 Installation
 ------------
 
-Copy `ssh-otp` to `/usr/local/bin`:
+Copy `ssh-otp` and `ssh-otp.py` to `/usr/local/bin`:
 
     sudo mkdir -p /usr/local/bin
-    sudo cp ssh-otp
+    sudo cp ssh-otp ssh-otp.py
 
 Add the following line in your `/etc/ssh/sshd_config`:
 
@@ -34,7 +35,9 @@ And restart sshd:
 Enable
 ------
 
-Generate one-time password secret for current user:
+If no one-time password has been generated the ssh-otp skips asking
+for OTP.
+If you generate a one-time password secret for current user with:
 
     ssh-otp setup
 
@@ -43,7 +46,7 @@ and type in the displayed code on your authenticator to actually enable
 one-time password authentication on SSH conneciton.
 
 
-You can find the configuration file at:
+The generated configuration file will be available at:
 
     ~/.ssh/otp
 
