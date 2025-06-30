@@ -1,7 +1,7 @@
-ssh-otp
+otp4ssh
 =======
 
-Add one-time password authentication to your SSH server.
+Add OTP (one-time password) authentication to your SSH server.
 
     user@localhost:~$ ssh server
     Enter passphrase for key '/home/user/.ssh/id_rsa': 
@@ -13,7 +13,7 @@ Add one-time password authentication to your SSH server.
 
 
 The following instructions are based on ubuntu, but they can be adapted for other Linux distributions.
-Depending on linux distribution Python 2 or Python 3 may be installed, ssh-otp supports both.
+Depending on linux distribution Python 2 or Python 3 may be installed, otp4ssh supports both.
 
 Installation
 ------------
